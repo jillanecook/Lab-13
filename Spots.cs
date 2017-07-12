@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LabBonus13actual
+namespace LabBonus13actual  //parking spot object that stores a vehicle 
+                            //create parkingGarage that takes a list of spot objects
 {
     class Spots
     {
         private List<Vehicle> vehicle;
+
 
         public Spots(List<Vehicle> vehicle)
         {
@@ -22,9 +24,9 @@ namespace LabBonus13actual
             foreach (Vehicle y in vehicle)
             {
                 string countCat = y.getType();
-                if (countCat ==type )
+                if (countCat == type)
                 {
-                    Console.WriteLine("There are "+ (y.getQuantity()) + " spots are left");
+                    Console.WriteLine("There are " + (y.getQuantity()) + " spots in the garage");
                     tryRun = true;
                 }
             }
@@ -32,12 +34,45 @@ namespace LabBonus13actual
             {
                 Console.WriteLine("That category isn't in the database");
             }
-            
+        }
+
+        public void getGarage(int quantity)
+        {
+            bool garage = false;
+
+            foreach (Vehicle z in vehicle)
+            {
+                string count = z.getType();
+               
+
+                if (quantity < 20)
+                {
+
+                    Console.WriteLine("There are now " + (z.getQuantity() - 1) + "spots remaining");
+                    garage = true;
+
+                }
+                if (garage == false)
+                {
+                    Console.WriteLine("Does not compute");
+                }
+
             }
-                        // (2) large spots (10 compact spots)
-                      // (20) single compact spots 
-                    //   (7) motorcycle spots 
+
         }
     }
+}
+
+        
+      
+
+   
+            
+            
+
+   
+         
+
+         
 
 

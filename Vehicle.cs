@@ -10,9 +10,9 @@ namespace LabBonus13actual
     {
         protected string type;
         protected string size;
-        protected string quantity;
+        protected int quantity;
 
-        public Vehicle(string type, string size, string quantity)
+        public Vehicle(string type, string size, int quantity)
         {
             this.type = type;
             this.size = size;
@@ -29,7 +29,7 @@ namespace LabBonus13actual
             return size;
         }
 
-        public string getQuantity()
+        public int getQuantity()
         {
             return quantity;
         }
